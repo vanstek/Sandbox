@@ -1,0 +1,56 @@
+scratch pad for ideas:
+
+add tilt.js to nav tiles
+
+color scheme: https://paletton.com/#uid=54d0s0kllllaFw0g0qFqFg0w0aF
+
+add little icons, font awesome
+
+parallax scrolling/cool transitions to link anchors
+
+
+
+
+
+drawing app:
+	http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/
+	https://code.tutsplus.com/tutorials/how-to-create-a-web-based-drawing-application-using-canvas--net-14288
+
+
+
+voice recognition eye sight thing with forum discussion 
+	https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition
+	https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API
+	https://developers.google.com/web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API
+
+
+voice recognition then piratify (or somehthing similar) the text. then play it back to user
+
+
+physics sandbox p5.js
+
+
+
+comments sections for each game??
+add/remove friends
+
+
+
+USER PROFILE: (for the sql requirement)
+	Games 1: Times played
+		high score
+		etc
+	app 2: times used
+		score: 
+		etc
+
+	edit profile
+	etc
+
+
+be able to view other user profiles
+	shows art made and high scores
+
+
+
+dont make it necessary to log in to play games, just to save scores
