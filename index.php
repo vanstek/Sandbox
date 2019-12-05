@@ -28,7 +28,7 @@
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
                     <a href="">
-                        <h2>Test</h2>
+                        <h2>Eyesight Checker</h2>
                     </a>
                     <a href="">
                         <img src="./img/notexture.png" alt="game_image">
@@ -41,7 +41,7 @@
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
                     <a href="">
-                        <h2>Test</h2>
+                        <h2>Physics Game</h2>
                     </a>
                     <a href="">
                         <img src="./img/notexture.png" alt="game_image">
@@ -58,20 +58,20 @@
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
                     <a href="">
-                        <h2>Test</h2>
+                        <h2>Pirate Voice</h2>
                     </a>
                     <a href="">
                         <img src="./img/notexture.png" alt="game_image">
                     </a>
                     <div class="description">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                        This is an application that records your voice, turns it into pirate-talk, and speeks it back to you.
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
                     <a href="">
-                        <h2>Test</h2>
+                        <h2>Draw</h2>
                     </a>
                     <a href="">
                         <img src="./img/notexture.png" alt="game_image">
