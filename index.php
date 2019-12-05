@@ -64,7 +64,7 @@
                         <img src="./img/notexture.png" alt="game_image">
                     </a>
                     <div class="description">
-                        This is an application that records your voice, turns it into pirate-talk, and speeks it back to you.
+                        This is an application that records your voice, turns it into pirate-talk, and speaks it back to you.
                     </div>
                 </div>
             </div>

@@ -65,14 +65,16 @@ body {
     opacity: 0;
     top: 0;
     right: -20px;
-    transition: 0.5s;
+    transition: 0.325s;
 }
 
 .loginbutton:hover span {
+    color: rgb(0, 208, 255);
     padding-right: 25px;
 }
 
 .loginbutton:hover {
+    font-style: italic;
     -webkit-box-shadow: 0px 0px 15px 0px rgb(1, 61, 78);
     -moz-box-shadow: 0px 0px 15px 0px rgb(1, 61, 78);
     box-shadow: 0px 0px 15px 0px rgb(1, 61, 78);
@@ -81,6 +83,7 @@ body {
 .loginbutton:hover span:after {
     opacity: 1;
     right: 0;
+    font-weight: 10000;
 }
 
 
@@ -107,7 +110,15 @@ body {
     width: 100%;
     word-wrap: break-word;
     color: rgb(49, 49, 49);
+    transition: .05s;
 }
+
+.gamecard:hover h2 {
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 2px #00c8ff;
+}
+
+
 
 .gamecard>.description {
     font-family: inherit;
@@ -117,14 +128,19 @@ body {
 }
 
 .gamecard img {
-    border: 1px solid #ddd;
     border-radius: 10px;
     padding: 5px;
     object-fit: cover;
     width: 100%;
     height: 25vh;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+a:hover {
+    text-decoration: none !important;
+}
 
 /* EYESIGHT CSS */
 
