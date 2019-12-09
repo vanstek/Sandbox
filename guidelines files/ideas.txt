@@ -1,5 +1,13 @@
 scratch pad for ideas:
 
+VOICE SANDBOX?
+
+return text to speech of:
+https://github.com/CorentinJ/Real-Time-Voice-Cloning.git
+Run python Api in PHP
+send data from php to python
+https://stackoverflow.com/questions/34944879/how-to-pass-data-from-php-to-python
+
 add tilt.js to nav tiles
 
 color scheme: https://paletton.com/#uid=54d0s0kllllaFw0g0qFqFg0w0aF
@@ -19,6 +27,8 @@ drawing app:
 
 
 voice recognition eye sight thing with forum discussion 
+
+	Aanyang
 	https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition
 	https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API
 	https://developers.google.com/web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API
@@ -50,7 +60,8 @@ USER PROFILE: (for the sql requirement)
 
 be able to view other user profiles
 	shows art made and high scores
-
-
-
 dont make it necessary to log in to play games, just to save scores
+
+
+
+

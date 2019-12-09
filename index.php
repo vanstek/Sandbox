@@ -27,10 +27,10 @@
             <div class="col-lg-3"></div>
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
-                    <a href="">
-                        <h2>Eyesight Checker</h2>
+                    <a href="eyesight.php">
+                        <h2>Eyesight Test</h2>
                     </a>
-                    <a href="">
+                    <a href="eyesight.php">
                         <img src="./img/notexture.png" alt="game_image">
                     </a>
                     <div class="description">
@@ -40,10 +40,10 @@
             </div>
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
-                    <a href="">
+                    <a href="p5js.php">
                         <h2>Physics Game</h2>
                     </a>
-                    <a href="">
+                    <a href="p5js.php">
                         <img src="./img/notexture.png" alt="game_image">
                     </a>
                     <div class="description">
@@ -57,10 +57,10 @@
             <div class="col-lg-3"></div>
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
-                    <a href="">
+                    <a href="pirate.php">
                         <h2>Pirate Voice</h2>
                     </a>
-                    <a href="">
+                    <a href="pirate.php">
                         <img src="./img/notexture.png" alt="game_image">
                     </a>
                     <div class="description">
@@ -70,7 +70,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
-                    <a href="">
+                    <a href="draw.php">
                         <h2>Draw</h2>
                     </a>
                     <a href="">

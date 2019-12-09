@@ -15,11 +15,15 @@ html {
 }
 
 body {
-
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(-225deg, #D4FFEC 0%, #57F2CC 48%, #4596FB 100%);
+    background-image: linear-gradient(
+        -225deg,
+        #d4ffec 0%,
+        #57f2cc 48%,
+        #4596fb 100%
+    );
 }
 
 /* INDEX CSS */
@@ -37,7 +41,7 @@ body {
     font-size: 0.75em;
     background-color: #2c2c2e;
     border: 3px solid rgb(61, 61, 61);
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
     transition: all 0.4s;
     cursor: pointer;
@@ -50,7 +54,6 @@ body {
     right: 10px;
     border-radius: 20px;
 }
-
 
 .loginbutton span {
     cursor: pointer;
@@ -86,7 +89,6 @@ body {
     font-weight: 10000;
 }
 
-
 /* gamecard css */
 .gamecard {
     background-color: white;
@@ -110,7 +112,7 @@ body {
     width: 100%;
     word-wrap: break-word;
     color: rgb(49, 49, 49);
-    transition: .05s;
+    transition: 0.05s;
 }
 
 .gamecard:hover h2 {
@@ -118,9 +120,7 @@ body {
     text-shadow: 0px 2px #00c8ff;
 }
 
-
-
-.gamecard>.description {
+.gamecard > .description {
     font-family: inherit;
     min-height: 2vh;
     padding: 2%;
@@ -142,13 +142,44 @@ a:hover {
     text-decoration: none !important;
 }
 
-/* EYESIGHT CSS */
+/* Game CSS */
+.game-header {
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Monoton', cursive;
+    user-select: none;
+}
 
+.game-header img {
+    padding: 5px 15px;
+    object-fit: cover;
+    min-width: 100px;
+    max-width: 40%;
+    height: auto;
+}
+
+.home-link {
+    width: 100%;
+
+    font-size: 3vw;
+    font-family: 'Monoton', cursive;
+    user-select: none;
+    color: black !important;
+}
+
+.game {
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+.eyesight-game {
+    height: 75vh;
+}
+
+/* EYESIGHT CSS */
 
 /* P5JS CSS */
 
-
 /* DRAWING CSS */
-
 
 /* PIRATIFY CSS */
