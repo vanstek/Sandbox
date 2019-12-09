@@ -15,34 +15,74 @@
     <!-- Annyang voice recognition script -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-
+    <!-- randomwords generator https://github.com/punkave/random-words-->
+    <script src="./js/randomWords.js"></script>
     <!-- annyang commands -->
     <script>
+        var score = 0;
+        var gen_string = words({
+            exactly: 3,
+            maxLength: 4,
+            join: ' '
+        }).toUpperCase();
+
+        // var highscore = sql connection
+
+        function startEyesight() {
+            $('#eyesight_desc').remove();
+            $('#eyesight-string').append(gen_string);
+            scrolldown = $('#eyeball').offset().top - $('#eyeball').height() / 2;
+            $('html, body').animate({
+                scrollTop: scrolldown
+            });
+        }
+
         if (annyang) {
-            // Let's define a command.
+            // command definitions
             var commands = {
-                'hello': function() {
-                    alert('Hello world!');
-                    console.log('test');
+                'start game': function() {
+                    $('#eyesight_desc').remove();
+                    $('#eyesight-string').append();
+
+                    $("#eyesight-string").html(gen_string);
+                    scrolldown = $('#eyeball').offset().top - $('#eyeball').height() / 2;
+                    $('html, body').animate({
+                        scrollTop: scrolldown
+                    });
+                },
+
+                'skip': function() {
+                    gen_string = words({
+                        exactly: 3,
+                        maxLength: 12,
+                        join: ' '
+                    }).toUpperCase();
+
+                    $("#eyesight-string").html(gen_string);
+                    scrolldown = $('#eyeball').offset().top + ($('#eyeball').height() / 2);
+                    $('html, body').animate({
+                        scrollTop: scrolldown
+                    })
 
                 },
-                'test this': function() {
-                    string = [...Array(5)].map(i => (~~(Math.random() * 36)).toString(36).toUpperCase()).join('');
-                    alert(string);
-                    $(eyeball).stop().animate({
-                        rotation: 360
-                    }, {
-                        duration: 500,
-                        step: function(now, fx) {
-                            $(this).css({
-                                "transform": "rotate(" + now + "deg)"
 
-                            });
-                        }
-                    });
-                }
+
+
+                // 'test this': function() {
+                //     string = [...Array(5)].map(i => (~~(Math.random() * 36)).toString(36).toUpperCase()).join('');
+                //     alert(string);
+                //     $("#eyeball").stop().animate({
+                //         rotation: 360
+                //     }, {
+                //         duration: 500,
+                //         step: function(now, fx) {
+                //             $(this).css({
+                //                 "transform": "rotate(" + now + "deg)"
+
+                //             });
+                //         }
+                //     });
+                // }
 
             };
 
@@ -52,6 +92,49 @@
             // Start listening.
             annyang.start();
         }
+
+
+        //annyang word printer. checks if correct string is said, then changes text size and text
+        annyang.addCallback('result', function(phrases) {
+            new_phrases = [];
+            //removes spaces
+            for (index = 0; index < phrases.length; index++) {
+                new_phrases.push(phrases[index].replace(/\s+/g, ''));
+
+            }
+            console.log("I think the user said: ", phrases[0]);
+            console.log("But then again, it could be any of the following: ", phrases);
+
+
+            gen_string_nospaces = gen_string.replace(/\s+/g, '').toUpperCase();
+            var answer = new_phrases[0].toString().toUpperCase();
+            console.log("question: " + gen_string_nospaces);
+            console.log("answer: " + answer);
+            console.log(answer.localeCompare(gen_string_nospaces));
+
+
+            if (answer.localeCompare(gen_string_nospaces) == 0) {
+                console.log("correct!")
+                //generates new string when correct
+                gen_string = words({
+                    exactly: 3,
+                    maxLength: 4,
+                    join: ' '
+                }).toUpperCase();
+
+                $("#eyesight-string").html(gen_string);
+                scrolldown = $('#eyeball').offset().top - $('#eyeball').height() / 2;
+                $('html, body').animate({
+                    scrollTop: scrolldown
+                });
+            } else if (new_phrases[0] !== gen_string) {
+                console.log('wrong answer');
+                scrolldown = $('#eyeball').offset().top - $('#eyeball').height() / 2;
+                $('html, body').animate({
+                    scrollTop: scrolldown
+                });
+            }
+        });
     </script>
 
 
@@ -75,16 +158,27 @@
                 <div class="col-4"></div>
             </div>
             <div class="row justify-content-center align-items-center">
-                <div class="col-1"></div>
-                <div class="col-10">
-                    <div class="game" id="eyeball">
-                        test
+
+                <div class="col-12">
+                    <div class="game eyesight-game" id="eyeball">
+                        <div class="eyesight-description" id="eyesight_desc">Welcome to the Eyesight Test. This test is not endorsed by doctors, and you should not use this to come to any scientific or physiological conclusions about yourself.<br><br>
+                            <b> Instructions:</b> <br>The game is simple. 5 random letters and numbers will be displayed on screen. It is your duty to recite those letters and numbers back to the computer at a distance of ~10 feet. Make sure you have allowed
+                            the website to access your microphone, or else it won't work. Every time you recite the alphanumeric combination correctly, the text will get smaller, and you will go again. Every correct answer is a point.
+                            You lose when answer incorrectly. The text is ~4 inches tall, but varies with the PPI of your monitor. <br><br>Best of luck!
+                            <br><br>
+                            <center><button class="btn btn-light" onclick="startEyesight()">Start game</button></center>
+
+                        </div>
+                        <div class="eyesight-string" id="eyesight-string"></div>
                     </div>
+
                 </div>
-                <div class="col-1"></div>
+
+
             </div>
         </div>
     </div>
+    <div class="container-fluid h-25"></div>
 
 
 
