@@ -1,3 +1,15 @@
+<!--php code to check for logged in session-->
+<?php
+session_start();
+
+// if (!isset($_SESSION['username'])) {
+//     echo 'You must log in to visit this page. Returning to log in page.';
+//     header('Refresh: 3; URL = login.php');
+//     exit();
+// }
+
+include('config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sandbox</title>
+    <title>Voicebox</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- bootstrap and fontawesome -->
@@ -16,12 +28,24 @@
 </head>
 
 <body>
-    <button class="loginbutton">
-        <span>Log in </span>
-    </button>
+
+    <!-- prints login/out button-->
+    <?php
+    if (!isset($_SESSION['username']) && empty($_SESSION['username'])) {
+        echo  "<button class='loginbutton' onClick=\"location.href='./login.php';\">
+                        <span>Log in</span>
+                    </button>";
+    } else if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+        echo  "<button class='loginbutton' onClick=\"location.href='./logout.php';\">
+                        <span>Log out</span>
+                    </button>";
+    }
+    ?>
+
+    </div>
     <div class="container-fluid h-100">
         <div class="row pt-md-0 pt-5">
-            <div class="jumbo">Sandbox</div>
+            <div class="jumbo">Voicebox</div>
         </div>
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-3"></div>
@@ -31,10 +55,10 @@
                         <h2>Eyesight Test</h2>
                     </a>
                     <a href="eyesight.php">
-                        <img src="./img/notexture.png" alt="game_image">
+                        <img src="./img/eyesight.png" alt="game_image">
                     </a>
                     <div class="description">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                        Pit your eyeballs against other players! This game tests your vision with ever-shrinking words that you have to read. Rack up points and see if you can get on the leaderboards!
                     </div>
                 </div>
             </div>

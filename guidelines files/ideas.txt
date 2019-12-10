@@ -63,5 +63,5 @@ be able to view other user profiles
 dont make it necessary to log in to play games, just to save scores
 
 
-
+CREATE ADMIN ACCOUNT WITH BETTER PERMISSIONS
 
