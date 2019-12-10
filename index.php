@@ -19,7 +19,7 @@ include('config.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Voicebox</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link rel="shortcut icon" type="image/png" href="img\favicon.ico" />
     <!-- bootstrap and fontawesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4067afb655.js" crossorigin="anonymous"></script>
@@ -77,10 +77,10 @@ include('config.php');
             </div>
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
-                    <a href="draw.php">
+                    <a href="messageboard.php">
                         <h2>Message Boards</h2>
                     </a>
-                    <a href="">
+                    <a href="messageboard.php">
                         <img src="./img/flamecursor.png" alt="game_image">
                     </a>
                     <div class="description">

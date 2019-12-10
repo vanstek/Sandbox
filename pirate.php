@@ -19,7 +19,7 @@ include('config.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pirate</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" type="image/png" href="/img/pirate.ico" />
+    <link rel="shortcut icon" type="image/png" href="img\pirate.ico" />
     <!-- bootstrap and fontawesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4067afb655.js" crossorigin="anonymous"></script>

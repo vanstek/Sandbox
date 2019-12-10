@@ -17,9 +17,9 @@ include('config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Voicebox</title>
+    <title>Voicebox Messageboards</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link rel="shortcut icon" type="image/png" href="img\cursor.ico" />
     <!-- bootstrap and fontawesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4067afb655.js" crossorigin="anonymous"></script>
@@ -28,73 +28,33 @@ include('config.php');
 </head>
 
 <body>
-
-    <!-- prints login/out button-->
-    <?php
-    if (!isset($_SESSION['username']) && empty($_SESSION['username'])) {
-        echo  "<button class='loginbutton' onClick=\"location.href='./login.php';\">
+    <div class="container-fluid h-100">
+        <div class="container-fluid h-100">
+            <div class="row pt-md-0 pt-5">
+                <div class="home-link col-2"><a class="home-link" href="index.php">Voicebox</a></div>
+                <div class="game-header col-8 .game-header">
+                    Messageboards
+                </div>
+                <div class="col-2">
+                    <!-- prints login/out button-->
+                    <?php
+                    if (!isset($_SESSION['username']) && empty($_SESSION['username'])) {
+                        echo  "<button class='loginbutton' onClick=\"location.href='./login.php';\">
                         <span>Log in</span>
                     </button>";
-    } else if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-        echo  "<button class='loginbutton' onClick=\"location.href='./logout.php';\">
+                    } else if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+                        echo  "<button class='loginbutton' onClick=\"location.href='./logout.php';\">
                         <span>Log out</span>
                     </button>";
-    }
-    ?>
+                    }
+                    ?></div>
+            </div>
 
-    </div>
-    <div class="container-fluid h-100">
-        <div class="row pt-md-0 pt-5">
-            <div class="jumbo">Voicebox</div>
-        </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-3 col-md-4 col-8">
-                <div class="gamecard">
-                    <a href="eyesight.php">
-                        <h2>Eyesight Test</h2>
-                    </a>
-                    <a href="eyesight.php">
-                        <img src="./img/eyesight.png" alt="game_image">
-                    </a>
-                    <div class="description">
-                        Pit your eyeballs against other players! This game tests your vision with ever-shrinking words that you have to read. Rack up points and see if you can get on the leaderboards!
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-8">
-                <div class="gamecard">
-                    <a href="pirate.php">
-                        <h2>Pirate TTS</h2>
-                    </a>
-                    <a href="pirate.php">
-                        <img src="./img/piratifier.jpg" alt="game_image">
-                    </a>
-                    <div class="description">
-                        This is an application that records your voice, turns it into pirate-talk, and speaks it back to you.
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-8">
-                <div class="gamecard">
-                    <a href="draw.php">
-                        <h2>Message Boards</h2>
-                    </a>
-                    <a href="">
-                        <img src="./img/flamecursor.png" alt="game_image">
-                    </a>
-                    <div class="description">
-                        Come hang out and say what's on your mind! Add to the conversation or create your own topics!
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1"></div>
-        </div>
-        <div class="row p-3">
-            <!-- spacing for tilt.js to move -->
+
+
         </div>
     </div>
-
+    </div>
 
 
     <!-- bootstrap js -->
@@ -104,17 +64,8 @@ include('config.php');
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <!-- tilt.js -->
-    <script src="./js/tilt.jquery.js">
 
-    </script>
-    <script>
-        $('.gamecard').tilt({
-            scale: 1.05,
-            perspective: 2750,
 
-        });
-    </script>
 </body>
 
 </html>
