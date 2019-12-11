@@ -20,7 +20,6 @@ include('config.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eyesight Checker</title>
-    <link rel="shortcut icon" type="image/png" href="img\glasses.ico" />
     <!-- bootstrap and fontawesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4067afb655.js" crossorigin="anonymous"></script>
@@ -45,11 +44,11 @@ include('config.php');
     <div class="container-fluid h-100">
         <div class="container-fluid h-100">
             <div class="row pt-md-0 pt-5">
-                <div class="home-link col-4"><a class="home-link" href="index.php">Voicebox</a></div>
-                <div class="game-header col-4 .game-header">Eyesight Test
+                <div class="home-link col-2"><a class="home-link" href="index.php">Voicebox</a></div>
+                <div class="game-header col-8 .game-header">Eyesight Test
                     <img src="./img/glasses.svg">
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                     <!-- prints login/out button-->
                     <?php
                     if (!isset($_SESSION['username']) && empty($_SESSION['username'])) {

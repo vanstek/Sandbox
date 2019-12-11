@@ -28,13 +28,12 @@ include('config.php');
 </head>
 
 <body>
+
     <div class="container-fluid h-100">
         <div class="container-fluid h-100">
             <div class="row pt-md-0 pt-5">
                 <div class="home-link col-2"><a class="home-link" href="index.php">Voicebox</a></div>
-                <div class="game-header col-8 .game-header">
-                    Messageboards
-                </div>
+                <div class="game-header col-8 .game-header">Messageboards</div>
                 <div class="col-2">
                     <!-- prints login/out button-->
                     <?php
@@ -47,15 +46,49 @@ include('config.php');
                         <span>Log out</span>
                     </button>";
                     }
-                    ?></div>
+                    ?>
+
+                </div>
             </div>
+            <div class="row mt-5 pt-5 justify-content-center">
 
+                <div class="col-md-2 col-4">
+                    <div class="gamecard eyesight-board">
+                        <a href="board.php">
+                            <h2>Eyesight Test</h2>
+                        </a>
+                        <a href="board.php">
+                            <img width="100%;" src="./img/penguinglasses.gif" alt="board_image">
+                        </a>
 
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="gamecard pirate-board ">
+                        <a href="board.php">
+                            <h2>Pirate TTS</h2>
+                        </a>
+                        <a href="board.php">
+                            <img width="100%;" src="./img/pirate.gif" alt="board_image">
+                        </a>
 
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="gamecard offtopic-board">
+                        <a href="board.php">
+                            <h2>Off-topic</h2>
+                        </a>
+                        <a href="board.php">
+                            <img src="./img/random.gif" alt="board_image">
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-    </div>
-
 
     <!-- bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -64,7 +97,15 @@ include('config.php');
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <!-- tilt.js -->
+    <script src="./js/tilt.jquery.js"></script>
+    <script>
+        $('.gamecard').tilt({
+            scale: 1.05,
+            perspective: 2750,
 
+        });
+    </script>
 
 </body>
 

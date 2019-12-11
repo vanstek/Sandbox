@@ -65,3 +65,6 @@ dont make it necessary to log in to play games, just to save scores
 
 CREATE ADMIN ACCOUNT WITH BETTER PERMISSIONS
 
+
+
+TO DO:

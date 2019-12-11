@@ -193,6 +193,25 @@ body {
     box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+.pirate-board {
+    background-color: rgb(255, 0, 0);
+    border: none;
+}
+.eyesight-board {
+    background-color: rgb(0, 251, 255);
+    border: none;
+}
+.offtopic-board {
+    background-color: rgb(247, 0, 255);
+    border: none;
+}
+
+.eyesight-board img,
+.pirate-board img,
+.offtopic-board img {
+    background-color: white;
+}
+
 a:hover {
     text-decoration: none !important;
 }
@@ -352,7 +371,7 @@ img.pirate-img {
         rgba(73, 58, 56, 1) 87%,
         rgba(50, 50, 50, 1) 100%
     );
-    background-image: url('./img./flag2.png');
+    background-image: url('./img/flag2.png');
     background-position: 30% 50%;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);

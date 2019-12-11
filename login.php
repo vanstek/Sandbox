@@ -20,7 +20,7 @@ if (
     $mypassword = mysqli_real_escape_string($con, $_POST['password']);
 
     //creates database query for said user
-    $sql = "SELECT user_ID FROM users WHERE username = '$myusername' and password = '$mypassword'";
+    $sql = "SELECT player_id FROM players WHERE username = '$myusername' and password = '$mypassword'";
     $result = mysqli_query($con, $sql);
 
     //if queried number of rows is 1, then input must match the database info

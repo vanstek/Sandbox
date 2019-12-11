@@ -1,0 +1,29 @@
+
+
+comments sections for each game??
+add/remove friends
+
+
+
+USER PROFILE: (for the sql requirement)
+	Games 1: Times played
+		high score
+		etc
+	app 2: times used
+		score: 
+		etc
+
+	edit profile
+	etc
+
+
+be able to view other user profiles
+	shows art made and high scores
+dont make it necessary to log in to play games, just to save scores
+
+
+CREATE ADMIN ACCOUNT WITH BETTER PERMISSIONS
+
+
+
+TO DO:
