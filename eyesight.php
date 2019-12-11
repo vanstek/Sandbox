@@ -12,6 +12,10 @@ include('config.php');
 ?>
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,9 +34,13 @@ include('config.php');
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- randomwords generator https://github.com/punkave/random-words-->
-    <script src="./js/randomWords.js"></script>
+    <script src="./js/randomWords.js" type="text/javascript"></script>
     <!-- game script -->
-    <script src="./js/eyesight.js"></script>
+
+
+
+
+    <script src="./js/eyesight.js" type="text/javascript"></script>
 
 
 
@@ -72,7 +80,7 @@ include('config.php');
                             <b> Instructions:</b> <br>The game is simple. 3 random word will be displayed on screen.. It is your duty to recite those words at a distance of ~10 feet. Make sure you have allowed
                             the website to access your microphone, or else it won't work. Every time you recite the words correctly, the text will get smaller, and you will go again. Every correct answer is a point, and you get five strikes until you lose.
                             The text is ~3.75, inches tall, but varies with the PPI of your monitor. Also, if there are some words that could be homophones, feel free to say "skip" to generate new words. <br><br>Best of luck!
-                            <br><br>
+                            <br>You must be logged in if you want your score to be saved.<br>
                             <center><button id="startButton" class="btn btn-light" onclick="startEyesight()">Start game</button></center>
 
                         </div>

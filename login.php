@@ -60,7 +60,7 @@ if (
         <div class="row pt-md-0 pt-5 pb-4">
             <div class="login-jumbo"><a href="index.php">Voicebox</a></div>
         </div>
-        <h3 class="mb-4 ">Sign in</h3>
+        <h3 class="mb-3 login-header">Sign in</h3>
         <div class="login-box mb-5 p-3 pt-5">
 
             <form class="d-flex justify-content-center flex-column align-items-center" role="form" action="login.php" method="post">

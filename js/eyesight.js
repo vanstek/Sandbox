@@ -10,6 +10,19 @@ var gen_string = words({
     join: ' '
 }).toUpperCase();
 
+//POST scpre to database
+function sendJSON(score) {
+    $.post(
+        './eyesightsql.php',
+        {
+            value: finalScore
+        },
+        function(data, status) {
+            console.log(data);
+        }
+    );
+}
+
 // var highscore = sql connection
 
 function startEyesight() {
@@ -203,6 +216,7 @@ annyang.addCallback('result', function(phrases) {
                 //PREVENTS GAME CODE FROM BEING RUN
                 gameStarted = false;
                 finalScore = score;
+
                 //WAITS BEFORE CHANING VALUE FROM "WRONG"
                 setTimeout(function() {
                     $('#eyesight-string').html(
@@ -210,14 +224,14 @@ annyang.addCallback('result', function(phrases) {
                     );
 
                     $('.eyesight-string').css('font-size', '6vh');
-                    console.log('success');
 
+                    sendJSON(finalScore);
                     $('#eyesight-string').append(
                         '<br><button class="btn btn-light" onClick="startEyesight()">Play again</button>'
                     );
-                }, 3000);
 
-                //SEND JSON
+                    //SEND JSON
+                }, 3000);
 
                 //RESET VALUES
                 score = 0;
@@ -238,6 +252,7 @@ annyang.addCallback('result', function(phrases) {
                         <img alt="skull icon" id="skull4" src="./img/skull.png">
                         <img alt="skull icon" id="skull5" src="./img/skull.png">
                     `);
+                console.log('success after');
             }
             //CONTINUE IF THERE ARE LIVES LEFT
             else {

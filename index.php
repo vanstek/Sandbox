@@ -54,9 +54,9 @@ include('config.php');
         <div class="row pt-md-0 pt-5">
             <div class="jumbo">Voicebox</div>
         </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-3 col-md-4 col-8">
+        <div class="row justify-content-center align-items-center px-md-5">
+
+            <div class="col-md-3 col-8">
                 <div class="gamecard">
                     <a href="eyesight.php">
                         <h2>Eyesight Test</h2>
@@ -69,7 +69,7 @@ include('config.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-8">
+            <div class="col-md-3 col-8">
                 <div class="gamecard">
                     <a href="pirate.php">
                         <h2>Pirate TTS</h2>
@@ -82,7 +82,7 @@ include('config.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-8">
+            <div class="col-md-3 col-8">
                 <div class="gamecard">
                     <a href="messageboards.php">
                         <h2>Message Boards</h2>
@@ -95,7 +95,20 @@ include('config.php');
                     </div>
                 </div>
             </div>
-            <div class="col-lg-1"></div>
+            <div class="col-md-3 col-8">
+                <div class="gamecard">
+                    <a href="leaderboards.php">
+                        <h2>Leaderboards</h2>
+                    </a>
+                    <a href="leaderboards.php">
+                        <img src="./img/flamecursor.png" alt="game_image">
+                    </a>
+                    <div class="description">
+                        See if you got in the top 50 for the eyesight test, or read other people's pirate text creations.
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div class="row p-3">
             <!-- spacing for tilt.js to move -->

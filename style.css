@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton|PT+Sans|Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 /* 
     usage
 
     font-family: 'Monoton', cursive;
     font-family: 'PT Sans', sans-serif;
     font-family: 'Press Start 2P', cursive;
+    font-family: 'Montserrat', sans-serif;
 */
 
 html {
@@ -96,6 +98,18 @@ body {
     font-weight: bold;
     width: 90%;
     float: left;
+}
+
+.login-header {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(42, 42, 42);
+    border: 1px solid rgba(39, 39, 39, 0.367);
+    border-radius: 8px;
+    padding: 10px 8px;
+    background-color: rgba(255, 255, 255, 0.816);
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(1, 61, 78);
+    -moz-box-shadow: 0px 0px 5px 0px rgb(1, 61, 78);
+    box-shadow: 0px 0px 5px 0px rgb(1, 61, 78);
 }
 
 .login-box {

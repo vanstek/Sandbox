@@ -1,3 +1,5 @@
+//POST text to database
+
 function textToSpeech(pirateInput) {
     var utter = new SpeechSynthesisUtterance();
     utter.rate = 0.75;
@@ -10,16 +12,28 @@ function textToSpeech(pirateInput) {
     window.speechSynthesis.speak(utter);
 }
 
+function sendJSON(text) {
+    $.post(
+        './piratesql.php',
+        {
+            pirate_text: text
+        },
+        function(data, status) {
+            console.log(data);
+        }
+    );
+}
+
 function toPirate() {
     var output = '';
     var pirateInput = $('#pirate-input').val();
     output = piratify(pirateInput);
     $('#pirate-input').val(output);
     textToSpeech(output);
+    sendJSON(output);
 }
 
 //starts annyang and records
-
 var recording = false;
 
 function record() {
