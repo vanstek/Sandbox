@@ -54,10 +54,10 @@ include('config.php');
 
                 <div class="col-md-2 col-4">
                     <div class="gamecard eyesight-board">
-                        <a href="board.php">
+                        <a href="board.php?board_id=1">
                             <h2>Eyesight Test</h2>
                         </a>
-                        <a href="board.php">
+                        <a href="board.php?board_id=1">
                             <img width="100%;" src="./img/penguinglasses.gif" alt="board_image">
                         </a>
 
@@ -65,10 +65,10 @@ include('config.php');
                 </div>
                 <div class="col-md-2 col-4">
                     <div class="gamecard pirate-board ">
-                        <a href="board.php">
+                        <a href="board.php?board_id=2">
                             <h2>Pirate TTS</h2>
                         </a>
-                        <a href="board.php">
+                        <a href="board.php?board_id=2">
                             <img width="100%;" src="./img/pirate.gif" alt="board_image">
                         </a>
 
@@ -76,10 +76,10 @@ include('config.php');
                 </div>
                 <div class="col-md-2 col-4">
                     <div class="gamecard offtopic-board">
-                        <a href="board.php">
+                        <a href="board.php?board_id=3">
                             <h2>Off-topic</h2>
                         </a>
-                        <a href="board.php">
+                        <a href="board.php?board_id=3">
                             <img src="./img/random.gif" alt="board_image">
                         </a>
 

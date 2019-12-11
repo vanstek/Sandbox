@@ -26,6 +26,44 @@ if (htmlspecialchars($_GET["board_id"]) == 1) {
 }
 
 
+//newthread sql insert
+
+if (isset($_POST['title'])) {
+    //sets SQL insert variables
+    $username = htmlspecialchars($_SESSION['username']);
+    $title =  htmlspecialchars($_POST['title']);
+    $body = htmlspecialchars($_POST['text']);;
+
+
+    //thread SQL insert
+    $sql = 'INSERT INTO ideas(board, username, title, date)
+        VALUES("' . mysqli_real_escape_string($con, $board) . '",
+                "' . mysqli_real_escape_string($con, $_SESSION['username']) .
+        '", "' . mysqli_real_escape_string($con, $_POST['title']) .
+        '", NOW())';
+
+    //checks for sql insert error, exits if there is one
+    if (!mysqli_query($con, $sql)) {
+        echo "Error: " . $sql . "<br>" . mysqli_error($con) . "<br><br>";
+        exit();
+    }
+    $thread_ID = mysqli_insert_id($con);
+    $sql = 'INSERT INTO replies(idea_id, playername, body, date)
+    VALUES(' . mysqli_real_escape_string($con, $thread_ID) . ',
+            "' . mysqli_real_escape_string($con, $_SESSION['username']) .
+        '", "' . mysqli_real_escape_string($con, $body) .
+        '", NOW())';
+
+    //checks for sql insert error, exits if there is one
+    if (!mysqli_query($con, $sql)) {
+        echo "Error: " . $sql . "<br>" . mysqli_error($con);
+        exit();
+    } else {
+        header('Location: ./thread.php?threadID=' . $thread_ID);
+    }
+}
+
+$con->close();
 
 
 ?>
@@ -69,80 +107,20 @@ if (htmlspecialchars($_GET["board_id"]) == 1) {
 
                 </div>
             </div>
-            <div class="container d-flex justify-content-center flex-column mt-5 p-5 w-75 align-items-center">
-                <?php
-                //redirects if somehow navigated to nonexistent board
-                if ($error == 1) {
-                    header('Refresh: 0; URL = ./messageboards.php');
-                }
-                ?>
-                <table class="table table-hover table-dark mt-5">
-                    <h1 class="board-header">
-                        <?php
-                        echo $board;
-                        ?>
-                    </h1>
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Thread</th>
-                            <th>Posts</th>
-                            <th>Author</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        // for loop to create new rows in table. 
-                        // queries for number of threads of board_id, then loops that many tyimes
-                        // posts  # queries sum of posts of same idea_id (an idea is a thread; didnt want to delete thread table from homework 4)
-
-                        $sql = "SELECT COUNT(*)
-                        FROM ideas
-                        WHERE board = '$board'";
-                        $result = $con->query($sql);
-
-                        //$count is the number of threads for a particular topic
-                        $row = mysqli_fetch_row($result);
-                        $count = $row[0];
-
-                        //fetches rows of particular topic
-                        $sql = "SELECT *
-                FROM ideas
-                WHERE board = '$board'";
-                        $result = $con->query($sql);
-
-                        //keeps threads in array $threads
-                        while ($ideas = mysqli_fetch_assoc($result)) {
-
-                            $sql = 'SELECT COUNT(*) FROM replies WHERE idea_id = ' . $ideas['idea_id'] . ';';
-                            $count_result = $con->query($sql);
-                            $count = mysqli_fetch_row($count_result);
-
-                            echo '<tr>
-                        <td><a href="./thread.php?threadID=' . $ideas['idea_id'] . '">' . $ideas['title'] . '</a></td>
-                        <td>' . $count[0] . '</td>
-                        <td>' . $ideas['username'] . '</td>
-                        <td>' . $ideas['date'] . '</td>
-                        </tr>';
-                        }
-
-                        $con->close();
-                        ?>
-                    </tbody>
-                </table>
-                <div class="container-fluid d-flex  flex-row justify-content-center p-4 my-5">
-                    <a class="btn btn-primary mx-2" role="button" href="messageboards.php">Boards</a>
-                    <?php
-                    if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-                        echo '
-                        <a class="mx-2 btn btn-primary" role="button" href="newthread.php?board_id=' . $_GET["board_id"] . '" title="new thread">Create new thread</a>';
-                    }
-                    ?>
+            <div class="container d-flex justify-content-center flex-column  p-5 w-75 align-items-center">
+                <div class="container d-flex justify-content-center new flex-column my-5 w-50 align-items-center">
+                    <div class="thread-form">
+                        <h2>Create new <?php echo $board ?> thread</h2>
+                        <form class="d-flex justify-content-center flex-column align-items-center w-100" role="form" action=<?php echo 'newthread.php?board_id=' . $_GET["board_id"]; ?> method="post">
+                            <input class="my-3 w-75" type="text" name="title" placeholder="Thread title">
+                            <textarea class="form-control w-100" name="text" placeholder="Optional text" rows="3"></textarea>
+                            <input class="btn btn-primary mt-3" type="submit">
+                        </form>
+                    </div>
                 </div>
-
-
-
-
+                <div class="container-fluid d-flex justify-content-around flex-row justify-content-around w-75">
+                    <button class="mx-3 btn btn-primary" onclick="history.go(-1);">Back </button>
+                </div>
             </div>
         </div>
 

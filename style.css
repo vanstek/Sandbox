@@ -19,12 +19,10 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(
-        -225deg,
-        #d4ffec 0%,
-        #57f2cc 48%,
-        #4596fb 100%
-    );
+    background-image: linear-gradient(-225deg,
+            #d4ffec 0%,
+            #57f2cc 48%,
+            #4596fb 100%);
 }
 
 /* INDEX CSS */
@@ -125,7 +123,7 @@ body {
     transition: 0.1s;
 }
 
-.login-jumbo > a {
+.login-jumbo>a {
     color: black !important;
 }
 
@@ -175,7 +173,7 @@ body {
     text-shadow: 0px 2px #00c8ff;
 }
 
-.gamecard > .description {
+.gamecard>.description {
     font-family: inherit;
     min-height: 2vh;
     padding: 2%;
@@ -194,13 +192,15 @@ body {
 }
 
 .pirate-board {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(231, 15, 15);
     border: none;
 }
+
 .eyesight-board {
     background-color: rgb(0, 251, 255);
     border: none;
 }
+
 .offtopic-board {
     background-color: rgb(247, 0, 255);
     border: none;
@@ -361,16 +361,14 @@ img.pirate-img {
 
 .pirate-game {
     background: rgb(0, 0, 0);
-    background: linear-gradient(
-        61deg,
-        rgba(0, 0, 0, 1) 19%,
-        rgba(42, 42, 42, 1) 32%,
-        rgba(59, 53, 53, 1) 42%,
-        rgba(0, 0, 0, 1) 54%,
-        rgba(62, 62, 62, 1) 71%,
-        rgba(73, 58, 56, 1) 87%,
-        rgba(50, 50, 50, 1) 100%
-    );
+    background: linear-gradient(61deg,
+            rgba(0, 0, 0, 1) 19%,
+            rgba(42, 42, 42, 1) 32%,
+            rgba(59, 53, 53, 1) 42%,
+            rgba(0, 0, 0, 1) 54%,
+            rgba(62, 62, 62, 1) 71%,
+            rgba(73, 58, 56, 1) 87%,
+            rgba(50, 50, 50, 1) 100%);
     background-image: url('./img/flag2.png');
     background-position: 30% 50%;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
@@ -412,6 +410,7 @@ img.pirate-img {
     color: white;
     text-shadow: 0px 1px rgb(0, 0, 0);
 }
+
 .pirate-output button:active {
     -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -428,3 +427,100 @@ img.pirate-img {
 }
 
 /* messageboard css */
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+table {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.reply-form {
+    border: 1px solid rgba(0, 0, 0, 0.224);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.reply-form h2 {
+    text-align: center;
+    padding: 10px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.reply-form textarea {
+    border: none;
+    padding: 10px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.board-header {
+    color: rgb(35, 35, 35);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.476);
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    background: rgb(0, 168, 255);
+    background: linear-gradient(250deg,
+            rgba(0, 168, 255, 1) 4%,
+            rgba(255, 255, 255, 1) 4%,
+            rgba(255, 255, 255, 1) 95%,
+            rgba(168, 255, 248, 1) 95%);
+}
+
+
+.thread-form {
+    border: 1px solid rgba(0, 0, 0, 0.224);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.809);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.thread-form input[type=text],
+.reply-form input[type=text] {
+    border: none;
+    padding: 4px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+.thread-form h2 {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.thread-form textarea {
+    border: none;
+    padding: 10px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}

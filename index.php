@@ -77,10 +77,10 @@ include('config.php');
             </div>
             <div class="col-lg-3 col-md-4 col-8">
                 <div class="gamecard">
-                    <a href="messageboard.php">
+                    <a href="messageboards.php">
                         <h2>Message Boards</h2>
                     </a>
-                    <a href="messageboard.php">
+                    <a href="messageboards.php">
                         <img src="./img/flamecursor.png" alt="game_image">
                     </a>
                     <div class="description">
