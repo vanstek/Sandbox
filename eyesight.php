@@ -23,7 +23,8 @@ include('config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eyesight Checker</title>
+    <title>Eyesight Test</title>
+    <link rel="shortcut icon" type="image/png" href="img\glasses.ico" />
     <!-- bootstrap and fontawesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4067afb655.js" crossorigin="anonymous"></script>
@@ -36,10 +37,6 @@ include('config.php');
     <!-- randomwords generator https://github.com/punkave/random-words-->
     <script src="./js/randomWords.js" type="text/javascript"></script>
     <!-- game script -->
-
-
-
-
     <script src="./js/eyesight.js" type="text/javascript"></script>
 
 

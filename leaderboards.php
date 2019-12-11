@@ -17,7 +17,7 @@ include('config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Voicebox</title>
+    <title>Leaderboards</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" type="image/png" href="img\favicon.ico" />
     <!-- bootstrap and fontawesome -->

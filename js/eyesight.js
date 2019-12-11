@@ -10,7 +10,7 @@ var gen_string = words({
     join: ' '
 }).toUpperCase();
 
-//POST scpre to database
+//POST score to database
 function sendJSON(score) {
     $.post(
         './eyesightsql.php',
@@ -234,6 +234,7 @@ annyang.addCallback('result', function(phrases) {
                 }, 3000);
 
                 //RESET VALUES
+                finalScore = 0;
                 score = 0;
                 wrong = 0;
                 size = 3.75;

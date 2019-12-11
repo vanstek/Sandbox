@@ -101,7 +101,7 @@ include('config.php');
                         <h2>Leaderboards</h2>
                     </a>
                     <a href="leaderboards.php">
-                        <img src="./img/flamecursor.png" alt="game_image">
+                        <img src="./img/leaderboards.jpg" alt="game_image">
                     </a>
                     <div class="description">
                         See if you got in the top 50 for the eyesight test, or read other people's pirate text creations.

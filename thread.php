@@ -79,7 +79,7 @@ $title = $thread['title'];
                 </div>
             </div>
             <div class="container d-flex justify-content-center flex-column mt-5 p-5 w-75 align-items-center">
-                <h3 class="title">
+                <h3 class="title login-header">
                     <?php echo $title ?>
                 </h3>
                 <table class="table table-hover table-dark mt-2">
