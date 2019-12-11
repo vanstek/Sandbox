@@ -524,3 +524,23 @@ table {
     -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
+.logged-in {
+    text-shadow: rgb(255, 255, 255) 1px 2px;
+    background-color: rgba(255, 255, 255, 0.353);
+    backdrop-filter: url(filters.svg#filter) blur(6px) grayscale(90%);
+    height: 15vw;
+    z-index: 1;
+    text-align: center;
+    font-size: 10vw;
+    user-select: none;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.75);
+}

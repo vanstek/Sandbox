@@ -31,7 +31,7 @@ if (
         $_SESSION['timeout'] = time();
         $_SESSION['username'] = $myusername;
         $con->close();
-        header("location: index.php");
+        header("location: index.php?success=1");
         exit();
     } else {
         $error = '<div class="alert alert-danger" role="alert"> Wrong username or password</div>';

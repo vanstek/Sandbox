@@ -43,6 +43,13 @@ include('config.php');
     ?>
 
     </div>
+    <?php
+    // checks to see if user came from log in page, and logged in successfully
+    if (isset($_GET['success']) && isset($_SESSION['username'])) {
+        echo '<div class="logged-in">Welcome, ' . $_SESSION['username'] . '</div>';
+    }
+
+    ?>
     <div class="container-fluid h-100">
         <div class="row pt-md-0 pt-5">
             <div class="jumbo">Voicebox</div>
@@ -114,6 +121,10 @@ include('config.php');
             perspective: 2750,
 
         });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(".logged-in").delay(1800).fadeOut(400);
     </script>
 </body>
 
