@@ -1,0 +1,10 @@
+This is a website for entertainment purposes based on voice commands, with an added forum to discuss the games or for off topic discussion.
+
+
+HOW TO USE:
+To register: click on login button, then register button.
+
+MAKE SURE link is https://, not http:// or else microphone access will be revoked.
+When using piratifier or eyesight game for first time, allow microphone access.
+
+The leaderboards display the top 50 eyesight scores and the latest pirate translations.

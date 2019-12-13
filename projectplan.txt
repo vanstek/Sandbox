@@ -1,0 +1,16 @@
+PROJECT PLAN:
+
+Day 1:
+Set up voice recognition at its most basic, learn the library
+
+Day 2:
+Use voice recognition to create eyesight game
+Use voice recognition to pirate translater
+
+Day 3: 
+Create forum
+Create SQL database
+Set up post request in javascript to send scores/translations to DB
+
+Day 4:
+Fine tune everything, add photos and more style to all elements

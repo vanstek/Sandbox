@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|PT+Sans|Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+/* 
+    usage
+
+    font-family: 'Monoton', cursive;
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Montserrat', sans-serif;
+*/
+
+html {
+    font-family: 'PT Sans', sans-serif;
+    color: rgb(20, 20, 20);
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(-225deg,
+            #d4ffec 0%,
+            #57f2cc 48%,
+            #4596fb 100%);
+}
+
+/* INDEX CSS */
+
+.jumbo {
+    width: 100%;
+    text-align: center;
+    font-size: 10vw;
+    font-family: 'Monoton', cursive;
+    user-select: none;
+}
+
+/* overkill button effect */
+.loginbutton {
+    font-size: 0.75em;
+    background-color: #2c2c2e;
+    border: 3px solid rgb(61, 61, 61);
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.4s;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    min-height: 30px;
+    width: 5vw;
+    min-width: 80px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 20px;
+    word-break: keep-all;
+    overflow: hidden;
+}
+
+.loginbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.loginbutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.325s;
+}
+
+.loginbutton:hover span {
+    color: rgb(0, 208, 255);
+    padding-right: 25px;
+}
+
+.loginbutton:hover {
+    font-style: italic;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(1, 61, 78);
+    -moz-box-shadow: 0px 0px 15px 0px rgb(1, 61, 78);
+    box-shadow: 0px 0px 15px 0px rgb(1, 61, 78);
+}
+
+.loginbutton:hover span:after {
+    opacity: 1;
+    right: 0;
+    font-weight: 10000;
+}
+
+.login-tag {
+    font-weight: bold;
+    width: 90%;
+    float: left;
+}
+
+.login-header {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(42, 42, 42);
+    border: 1px solid rgba(39, 39, 39, 0.367);
+    border-radius: 8px;
+    padding: 10px 8px;
+    background-color: rgba(255, 255, 255, 0.816);
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(1, 61, 78);
+    -moz-box-shadow: 0px 0px 5px 0px rgb(1, 61, 78);
+    box-shadow: 0px 0px 5px 0px rgb(1, 61, 78);
+}
+
+.login-box {
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.231);
+    width: 25%;
+    min-width: 150px;
+}
+
+.login-box input {
+    padding: 4px 8px;
+    width: 95%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px 2px rgba(136, 136, 136, 0.176);
+}
+
+.login-jumbo {
+    width: 100%;
+    text-align: center;
+    font-size: 6vw;
+    font-family: 'Monoton', cursive;
+    user-select: none;
+    transition: 0.1s;
+}
+
+.login-jumbo>a {
+    color: black !important;
+}
+
+.login-box button {
+    padding: 2px;
+    color: black;
+    width: 65%;
+    background-color: #57f2cc;
+    border: 1px solid rgba(0, 0, 0, 0.109);
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+.login-box button:hover {
+    color: rgb(255, 255, 255);
+    background-color: #4596fb;
+}
+
+/* gamecard css */
+.gamecard {
+    background-color: white;
+    border: 4px solid rgba(241, 241, 241, 0.612);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
+    -webkit-box-shadow: 0px 0px 30px -14px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 30px -14px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px -14px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+.gamecard h2 {
+    transform: translateZ(10px);
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word;
+    color: rgb(49, 49, 49);
+    transition: 0.05s;
+}
+
+.gamecard:hover h2 {
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 2px #00c8ff;
+}
+
+.gamecard>.description {
+    font-family: inherit;
+    min-height: 2vh;
+    padding: 2%;
+    word-wrap: break-word;
+}
+
+.gamecard img {
+    border-radius: 10px;
+    padding: 5px;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.pirate-board {
+    background-color: rgb(231, 15, 15);
+    border: none;
+}
+
+.eyesight-board {
+    background-color: rgb(0, 251, 255);
+    border: none;
+}
+
+.offtopic-board {
+    background-color: rgb(247, 0, 255);
+    border: none;
+}
+
+.eyesight-board img,
+.pirate-board img,
+.offtopic-board img {
+    background-color: white;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+/* Game CSS */
+.game-header {
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Monoton', cursive;
+    user-select: none;
+}
+
+.game-header img {
+    padding: 5px 15px;
+    object-fit: cover;
+    min-width: 100px;
+    max-width: 40%;
+    height: auto;
+}
+
+.home-link {
+    width: 100%;
+
+    font-size: 3vw;
+    font-family: 'Monoton', cursive;
+    user-select: none;
+    color: black !important;
+}
+
+.game {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 3px;
+    min-height: 5vh;
+    -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* EYESIGHT CSS */
+
+.eyesight-game {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    min-height: 65vh;
+    height: auto;
+}
+
+.eyesight-description {
+    align-self: center;
+    margin: 5%;
+    border-radius: 5px;
+    padding: 15px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.299);
+    border: 2px solid rgba(0, 0, 0, 0.129);
+    -webkit-box-shadow: 0px 0px 151px -53px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 151px -53px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 151px -53px rgba(0, 0, 0, 0.75);
+}
+
+.eyesight-string {
+    text-align: center;
+    word-wrap: break-word;
+    width: 100%;
+    font-size: 3.5in;
+    height: auto;
+
+    padding: 0px 50px 0px 0px;
+    padding-bottom: 20px;
+}
+
+.eyesight-counter {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 100%;
+}
+
+.eyesight-counter img {
+    align-self: center;
+    justify-self: center;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+.eyesight-score {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.312);
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.eyesight-score p {
+    padding: 10px 5px 0px;
+    margin: 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 10px;
+}
+
+.eyesight-lives {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/* PIRATIFY CSS */
+
+img.pirate-img {
+    padding: 5px;
+    object-fit: cover;
+    max-width: 100%;
+    height: 10vh;
+}
+
+.pirate-textarea {
+    margin: 0px;
+    text-align: left;
+    min-height: 30vh;
+    width: 90%;
+    padding: 5px;
+    font-size: 2em;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.pirate-output {
+    height: 30vh;
+    width: 100%;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.pirate-game {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(61deg,
+            rgba(0, 0, 0, 1) 19%,
+            rgba(42, 42, 42, 1) 32%,
+            rgba(59, 53, 53, 1) 42%,
+            rgba(0, 0, 0, 1) 54%,
+            rgba(62, 62, 62, 1) 71%,
+            rgba(73, 58, 56, 1) 87%,
+            rgba(50, 50, 50, 1) 100%);
+    background-image: url('./img/flag2.png');
+    background-position: 30% 50%;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.pirate-output .record {
+    background-color: rgb(53, 158, 53);
+    border-radius: 5px;
+    transition: 0.2s;
+    font-size: 1.2em;
+    color: white;
+    border: 2px solid rgb(37, 173, 37);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.pirate-output .record:hover {
+    color: white;
+    text-shadow: 0px 1px rgb(0, 0, 0);
+    border: 2px solid rgb(37, 173, 37);
+}
+
+.pirate-output .translate {
+    background-color: #0093a6;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: white;
+    border: 2px solid #00abc2;
+    transition: 0.1s;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.pirate-output .translate:hover {
+    color: white;
+    text-shadow: 0px 1px rgb(0, 0, 0);
+}
+
+.pirate-output button:active {
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    transform: translateY(2px);
+}
+
+/* unused */
+.pirate-counter {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5vh;
+    text-align: center;
+    height: min-content;
+}
+
+/* messageboard css */
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+table {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.reply-form {
+    border: 1px solid rgba(0, 0, 0, 0.224);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.reply-form h2 {
+    text-align: center;
+    padding: 10px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.reply-form textarea {
+    border: none;
+    padding: 10px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.board-header {
+    color: rgb(35, 35, 35);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.476);
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    background: rgb(0, 168, 255);
+    background: linear-gradient(250deg,
+            rgba(0, 168, 255, 1) 4%,
+            rgba(255, 255, 255, 1) 4%,
+            rgba(255, 255, 255, 1) 95%,
+            rgba(168, 255, 248, 1) 95%);
+}
+
+
+.thread-form {
+    border: 1px solid rgba(0, 0, 0, 0.224);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.809);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.thread-form input[type=text],
+.reply-form input[type=text] {
+    border: none;
+    padding: 4px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+.thread-form h2 {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.thread-form textarea {
+    border: none;
+    padding: 10px;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.logged-in {
+    text-shadow: rgb(255, 255, 255) 1px 2px;
+    background-color: rgba(255, 255, 255, 0.353);
+    backdrop-filter: url(filters.svg#filter) blur(6px) grayscale(90%);
+    height: 15vw;
+    z-index: 1;
+    text-align: center;
+    font-size: 10vw;
+    user-select: none;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.75);
+}
