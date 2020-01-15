@@ -4,7 +4,7 @@ This was my project for INFSCI 1059 class at Pitt.
 
 ## Author
 
-#### Rafael Caferati
+#### Alex van Stekelenborg
 
 - Checkout my <a href="https://vanstek.dev/" title="Full-Stack Web Developer, UI/UX Javascript Specialist" target="_blank">portfolio</a>
 
